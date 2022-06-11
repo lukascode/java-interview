@@ -9,17 +9,17 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.Optional;
 
-public class CarCrudServiceTest {
+class CarCrudServiceTest {
 
     private CarCrudService sut;
 
     @BeforeEach
-    public void beforeEach() {
+    void beforeEach() {
         sut = new CarCrudService();
     }
 
     @Test
-    public void shouldAddCarProperly() {
+    void shouldAddCarProperly() {
         // given
         AddCarDto car = prepareCar();
 
@@ -32,7 +32,7 @@ public class CarCrudServiceTest {
     }
 
     @Test
-    public void shouldGetAllCarsProperly() {
+    void shouldGetAllCarsProperly() {
         // given
         sut.addCar(prepareCar());
         sut.addCar(prepareCar());
@@ -46,7 +46,7 @@ public class CarCrudServiceTest {
     }
 
     @Test
-    public void shouldGetCarByNameProperly() {
+    void shouldGetCarByNameProperly() {
         // given
         sut.addCar(prepareCar());
 
